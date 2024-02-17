@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>EnvVariablesGenerator.Sample</RootNamespace>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="var.env">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </AdditionalFiles>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\EnvVariablesGenerator\EnvVariablesGenerator.csproj" OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"/>
+    </ItemGroup>
+
+    
+
+</Project>
