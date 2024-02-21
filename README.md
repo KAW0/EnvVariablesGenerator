@@ -1,6 +1,6 @@
 # EnvVariablesGenerator
 
-`EnvVariablesGenerator is a source generator that generates a special class called EnvVariables based on an *.env file. 
+`EnvVariablesGenerator` is a source generator that generates a special class called EnvVariables based on an *.env file. 
 While there are other libraries that provide similar functionality, they often hardcode variables from the *.env file, making them less flexible.
 
 However, in this library, the .env **file is copied to the built project**, allowing for changes to be made to the variables from there.
@@ -19,14 +19,17 @@ To use add those lines in your .csproj file:
     </AdditionalFiles>
 </ItemGroup>
 ```
-## Example var.env file
+Where `var.env` is name of your `*.env` file. Name is arbitrar except it must end with `.env`.
+Also only one filename in project should end with `.env`
+## Example var.env file 
 ```
 DB_HOST=localhost
 DB_PORT=5432
 ```
 Unfortunately, we cannot use a file named .env because MSBuild goes crazy when trying to add a file with just an extension as an additional file.
-Aside from that, you can use whatever name you prefer, but only one file can be utilized.## Example usage
+Aside from that, you can use whatever name you prefer, but only one file can be utilized.
 
+## Example usage
 ```cs
  Console.WriteLine(EnvVariables.Host);
  Console.WriteLine(EnvVariables.Port);
