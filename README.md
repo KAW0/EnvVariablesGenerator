@@ -11,7 +11,7 @@ Additionally, you can opt to exclude this file from the built project and allow 
 To use add those lines in your .csproj file:
 ```xml
 <ItemGroup>
-   <PackageReference Include=" EnvVariablesGenerator" Version="1.0.0"  PrivateAssets="all" />
+   <PackageReference Include="EnvVariablesGenerator" Version="1.0.2"  PrivateAssets="all" />
 </ItemGroup>
 <ItemGroup>
     <AdditionalFiles Include="var.env">
